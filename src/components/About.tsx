@@ -3,20 +3,20 @@ import { Code2, Palette, Rocket } from 'lucide-react';
 const skills = [
   {
     icon: <Code2 className="w-6 h-6" />,
-    title: "Development",
-    description: "Expertise in modern web technologies and frameworks",
+    title: "Desarrollo",
+    description: "Experiencias en tecnologías web modernas y librerías",
     techs: ["React", "TypeScript", "Node.js", "Next.js"]
   },
   {
     icon: <Palette className="w-6 h-6" />,
-    title: "Design",
-    description: "Creating beautiful and intuitive user interfaces",
+    title: "Diseño",
+    description: "Crear interfaces modernas y atractivas",
     techs: ["Figma", "Tailwind CSS", "Framer Motion"]
   },
   {
     icon: <Rocket className="w-6 h-6" />,
-    title: "Performance",
-    description: "Optimizing for speed and user experience",
+    title: "Rendimiento",
+    description: "Optimización de rendimiento y experiencia de usuario",
     techs: ["Web Vitals", "SEO", "Analytics"]
   }
 ];
@@ -28,7 +28,7 @@ export default function About() {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div>
             <h2 className="text-4xl font-bold mb-6">
-              <span className="bg-gradient-to-r from-blue-500 to-blue-700 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-blue-500 to-blue-700 bg-clip-text text-transparent border-b-4">
                 Sobre mi
               </span>
             </h2>
@@ -40,7 +40,7 @@ export default function About() {
             </p>
           </div>
           
-          <div className="grid gap-6">
+          <div className="grid gap-6 ">
             {skills.map((skill, index) => (
               <div 
                 key={index}

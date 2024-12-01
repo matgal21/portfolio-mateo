@@ -2,8 +2,8 @@ import { ExternalLink, Github } from 'lucide-react';
 
 const projects = [
   {
-    title: "Primer proyecto",
-    description: "A modern web application built with React and TypeScript",
+    title: "solodeida.com",
+    description: "Blog de viajes, noticias de aviación y turismo",
     image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=800",
     tags: ["Astro", "TypeScript", "Tailwind"],
     github: "https://github.com",
@@ -32,7 +32,7 @@ export default function Projects() {
     <section id="projects" className="py-20 bg-black/50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-4xl font-bold mb-12 text-center">
-          <span className="bg-gradient-to-r from-blue-500 to-blue-700 bg-clip-text text-transparent ">
+          <span className="bg-gradient-to-r from-blue-500 to-blue-700 bg-clip-text text-transparent border-b-4">
             Algunos de mis proyectos
           </span>
         </h2>
@@ -71,6 +71,7 @@ export default function Projects() {
                   <a 
                     href={project.demo}
                     className="flex items-center gap-2 hover:text-yellow-500 transition-colors"
+                    target='_blank'
                   >
                     <ExternalLink className="w-4 h-4" /> Web
                   </a>

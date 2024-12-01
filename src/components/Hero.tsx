@@ -10,7 +10,7 @@ export default function Hero() {
           <div className="flex-1 text-center md:text-left">
             <h1 className="text-5xl md:text-7xl font-bold mb-6">
               <span className="text-white">
-                Mateo Galvez<br /><span className='bg-gradient-to-r from-blue-500 to-blue-700 bg-clip-text text-transparent'>Web Developer</span>
+                Mateo Galvez<br /><span className='bg-gradient-to-r from-blue-500 to-blue-700 bg-clip-text text-transparent border-b-4'>Web Developer</span>
               </span>
             </h1>
             <p className="text-xl md:text-2xl mb-8 text-gray-300 max-w-2xl">
