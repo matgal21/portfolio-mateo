@@ -3,6 +3,14 @@ import { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 import toast from 'react-hot-toast';
 
+// Initialize EmailJS with public key
+emailjs.init({
+  publicKey: '_-9zDviJ6IYJmyLnj',
+  limitRate: {
+    throttle: 2000,
+  }
+});
+
 export default function Contact() {
   const formRef = useRef<HTMLFormElement>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -13,15 +21,29 @@ export default function Contact() {
 
     try {
       setIsSubmitting(true);
-      await emailjs.sendForm(
-        'portfoliomateo43797473', // Replace with your EmailJS service ID
-        'template_whu8y0d', // Replace with your EmailJS template ID
-        formRef.current,
-        '_-9zDviJ6IYJmyLnj' // Replace with your EmailJS public key
+      
+      const templateParams = {
+        from_name: formRef.current.from_name.value,
+        from_email: formRef.current.from_email.value,
+        message: formRef.current.message.value,
+        to_name: 'Mateo',
+      };
+
+      const result = await emailjs.send(
+        'portfoliomateo43797473',
+        'template_whu8y0d',
+        templateParams,
+        '_-9zDviJ6IYJmyLnj'
       );
-      toast.success('Message sent successfully!');
-      formRef.current.reset();
+      
+      if (result.status === 200) {
+        toast.success('Message sent successfully!');
+        formRef.current.reset();
+      } else {
+        throw new Error('Failed to send message');
+      }
     } catch (error) {
+      console.error('EmailJS Error:', error);
       toast.error('Failed to send message. Please try again.');
     } finally {
       setIsSubmitting(false);
@@ -76,7 +98,7 @@ export default function Contact() {
             <div>
               <input
                 type="text"
-                name="user_name"
+                name="from_name"
                 placeholder="Name"
                 required
                 className="w-full px-4 py-3 rounded-lg backdrop-blur-md bg-white/5 border border-white/10 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500/20 transition-all"
@@ -85,7 +107,7 @@ export default function Contact() {
             <div>
               <input
                 type="email"
-                name="user_email"
+                name="from_email"
                 placeholder="mail@gmail.com"
                 required
                 className="w-full px-4 py-3 rounded-lg backdrop-blur-md bg-white/5 border border-white/10 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500/20 transition-all"
