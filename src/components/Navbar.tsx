@@ -16,21 +16,21 @@ export default function Navbar() {
 
           <div className="hidden md:block">
             <div className="flex items-center space-x-8">
-              <a href="#home" className="hover:text-[#ffd60a] hover:border-b-4 transition-colors">Inicio</a>
-              <a href="#projects" className="hover:text-[#ffd60a] hover:border-b-4 transition-colors">Proyectos</a>
-              <a href="#about" className="hover:text-[#ffd60a] hover:border-b-4 transition-colors">Sobre mi</a>
-              <a href="#contact" className="hover:text-[#ffd60a] hover:border-b-4 transition-colors">Contacto</a>
+              <a href="#home" className="hover:text-[#ffd60a] hover:border-b-4 transition-colors">Home</a>
+              <a href="#projects" className="hover:text-[#ffd60a] hover:border-b-4 transition-colors">Projects</a>
+              <a href="#about" className="hover:text-[#ffd60a] hover:border-b-4 transition-colors">About Me</a>
+              <a href="#contact" className="hover:text-[#ffd60a] hover:border-b-4 transition-colors">Contact</a>
             </div>
           </div>
 
           <div className="hidden md:flex items-center space-x-4">
-            <a href="https://github.com/matgal21" className="hover:text-blue-500 transition-colors">
+            <a href="https://github.com/matgal21" className="hover:text-blue-500 transition-colors" target='_blank'>
               <Github className="w-5 h-5" />
             </a>
-            <a href="https://www.linkedin.com/in/mateo-galvez-618000225/" className="hover:text-sky-500 transition-colors">
+            <a href="https://www.linkedin.com/in/mateo-galvez-618000225/" className="hover:text-sky-500 transition-colors" target='_blank'>
               <Linkedin className="w-5 h-5" />
             </a>
-            <a href="mailto:mateogalvez123321@gmail.com" className="hover:text-red-500 ">
+            <a href="mailto:mateogalvez123321@gmail.com" className="hover:text-red-500 " target='_blank'>
               <Mail className="w-5 h-5" />
             </a>
           </div>
@@ -46,10 +46,10 @@ export default function Navbar() {
       {isOpen && (
         <div className="md:hidden">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 backdrop-blur-md bg-black/30">
-            <a href="#home" className="block px-3 py-2 hover:text-[#ffd60a] transition-colors duration-300 ease-in-out justify-center text-center hover:border-b-2 t">Inicio</a>
-            <a href="#projects" className="block px-3 py-2 hover:text-[#ffd60a] transition-colors duration-300 ease-in-out justify-center text-center hover:border-b-2">Proyectos</a>
-            <a href="#about" className="block px-3 py-2 hover:text-[#ffd60a] transition-colors duration-300 ease-in-out justify-center text-center hover:border-b-2">Sobre mi</a>
-            <a href="#contact" className="block px-3 py-2 hover:text-[#ffd60a] transition-colors duration-300 ease-in-out justify-center text-center hover:border-b-2 ">Contacto</a>
+            <a href="#home" className="block px-3 py-2 hover:text-[#ffd60a] transition-colors duration-300 ease-in-out justify-center text-center hover:border-b-2 t">Home</a>
+            <a href="#projects" className="block px-3 py-2 hover:text-[#ffd60a] transition-colors duration-300 ease-in-out justify-center text-center hover:border-b-2">Projects</a>
+            <a href="#about" className="block px-3 py-2 hover:text-[#ffd60a] transition-colors duration-300 ease-in-out justify-center text-center hover:border-b-2">About Me</a>
+            <a href="#contact" className="block px-3 py-2 hover:text-[#ffd60a] transition-colors duration-300 ease-in-out justify-center text-center hover:border-b-2 ">Contact</a>
           </div>
         </div>
       )}

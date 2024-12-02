@@ -3,19 +3,19 @@ import { ExternalLink, Github } from 'lucide-react';
 const projects = [
   {
     title: "solodeida.com",
-    description: "Blog de viajes, noticias de aviación y turismo",
+    description: "Travel blog, aviation and tourist news ",
     image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=800",
     tags: ["Astro", "TypeScript", "Tailwind"],
-    github: "https://github.com",
+    github: "https://github.com/matgal21/blog-solodeida",
     demo: "https://solodeida.com"
   },
   {
     title: "Segundo proyecto",
-    description: "Página web para contar y marcar países visitados",
+    description: "Web page for counting and marking countries visited",
     image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800",
     tags: ["Next.js", "Firebase", "Tailwind"],
-    github: "https://github.com",
-    demo: "https://demo.com"
+    github: "https://github.com/matgal21/app-paises-visitados",
+    demo: "https://app-paises-visitados.vercel.app/"
   },
   {
     title: "Tercer proyecto",
@@ -33,7 +33,7 @@ export default function Projects() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-4xl font-bold mb-12 text-center">
           <span className="bg-gradient-to-r from-blue-500 to-blue-700 bg-clip-text text-transparent border-b-4">
-            Algunos de mis proyectos
+          Featured Projects
           </span>
         </h2>
         

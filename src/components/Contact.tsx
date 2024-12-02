@@ -14,10 +14,10 @@ export default function Contact() {
     try {
       setIsSubmitting(true);
       await emailjs.sendForm(
-        'YOUR_SERVICE_ID', // Replace with your EmailJS service ID
-        'YOUR_TEMPLATE_ID', // Replace with your EmailJS template ID
+        'portfoliomateo43797473', // Replace with your EmailJS service ID
+        'template_whu8y0d', // Replace with your EmailJS template ID
         formRef.current,
-        'YOUR_PUBLIC_KEY' // Replace with your EmailJS public key
+        '_-9zDviJ6IYJmyLnj' // Replace with your EmailJS public key
       );
       toast.success('Message sent successfully!');
       formRef.current.reset();
@@ -33,7 +33,7 @@ export default function Contact() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-4xl font-bold text-center mb-12">
           <span className="bg-gradient-to-r from-blue-500 to-blue-700 bg-clip-text text-transparent border-b-4">
-            No dudes en contactarme
+          Get in Touch
           </span>
         </h2>
 
@@ -55,8 +55,8 @@ export default function Contact() {
                   <Phone className="w-6 h-6" />
                 </div>
                 <div>
-                  <h3 className="font-semibold">Telefono</h3>
-                  <p className="text-gray-400">+54 (2923) 414359</p>
+                  <h3 className="font-semibold">Phone</h3>
+                  <p className="text-gray-400">+54 2923-414359</p>
                 </div>
               </div>
               
@@ -65,7 +65,7 @@ export default function Contact() {
                   <MapPin className="w-6 h-6" />
                 </div>
                 <div>
-                  <h3 className="font-semibold">Ubicación</h3>
+                  <h3 className="font-semibold">Location</h3>
                   <p className="text-gray-400">Buenos Aires, Argentina</p>
                 </div>
               </div>
@@ -77,7 +77,7 @@ export default function Contact() {
               <input
                 type="text"
                 name="user_name"
-                placeholder="Nombre"
+                placeholder="Name"
                 required
                 className="w-full px-4 py-3 rounded-lg backdrop-blur-md bg-white/5 border border-white/10 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500/20 transition-all"
               />
@@ -95,7 +95,7 @@ export default function Contact() {
               <textarea
                 name="message"
                 rows={4}
-                placeholder="Tu mensaje de consulta"
+                placeholder="Your message"
                 required
                 className="w-full px-4 py-3 rounded-lg backdrop-blur-md bg-white/5 border border-white/10 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500/20 transition-all"
               />
@@ -105,7 +105,7 @@ export default function Contact() {
               disabled={isSubmitting}
               className="w-full px-8 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
             >
-              {isSubmitting ? 'Enviando...' : 'Mensaje enviado!'}
+              {isSubmitting ? 'Sending' : 'Send Message'}
             </button>
           </form>
         </div>

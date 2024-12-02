@@ -14,20 +14,20 @@ export default function Hero() {
               </span>
             </h1>
             <p className="text-xl md:text-2xl mb-8 text-gray-300 max-w-2xl">
-            Programador apasionado en el desarrollado web front-end con experiencia en crear interfaces modernas, intuitivas y funcionales. 
+            Passionate front-end web developer with experience in creating modern, intuitive and functional interfaces. 
             </p>
             <div className="flex flex-wrap justify-center md:justify-start gap-4">
               <a 
                 href="#projects" 
                 className="px-8 py-3 bg-blue-600 hover:bg-blue-700 rounded-full flex items-center gap-2 transition-all hover:gap-4"
               >
-                Ver proyectos <ArrowRight className="w-4 h-4" />
+                View Projects<ArrowRight className="w-4 h-4" />
               </a>
               <a 
                 href="#contact" 
                 className="px-8 py-3 border border-blue-600 rounded-full hover:bg-blue-600/10 transition-colors"
               >
-                Contacto
+                Contact Me
               </a>
             </div>
           </div>
