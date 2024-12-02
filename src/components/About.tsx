@@ -34,7 +34,7 @@ export default function About() {
                 </span>
               </h2>
               <img 
-                src="/public/mateo.jpg" 
+                src="/mateo.jpg" 
                 alt="Mateo" 
                 className="w-48 h-48 rounded-full object-cover shadow-lg shadow-gray-50 hover:scale-110 hover:transition "
               />
