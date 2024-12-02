@@ -41,6 +41,7 @@ export default function Projects() {
           {projects.map((project, index) => (
             
             <div key={index} className="group relative overflow-hidden rounded-xl backdrop-blur-md bg-white/5 hover:bg-white/10 transition-all duration-300">
+              <a href={project.demo} target='_blank'>
               <div className="aspect-video overflow-hidden">
                 <img 
                   src={project.image} 
@@ -65,6 +66,7 @@ export default function Projects() {
                   <a 
                     href={project.github}
                     className="flex items-center gap-2 hover:text-[#ffd60a] transition-colors"
+                    target='_blank'
                   >
                     <Github className="w-4 h-4" /> Código
                   </a>
@@ -77,6 +79,7 @@ export default function Projects() {
                   </a>
                 </div>
               </div>
+              </a>
             </div>
           ))}
         </div>

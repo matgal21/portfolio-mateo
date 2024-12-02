@@ -30,7 +30,7 @@ export default function Navbar() {
             <a href="https://www.linkedin.com/in/mateo-galvez-618000225/" className="hover:text-sky-500 transition-colors" target='_blank'>
               <Linkedin className="w-5 h-5" />
             </a>
-            <a href="mailto:mateogalvez123321@gmail.com" className="hover:text-red-500 " target='_blank'>
+            <a href="mailto:mateogalvez123321@gmail.com" className="hover:text-red-500 ">
               <Mail className="w-5 h-5" />
             </a>
           </div>

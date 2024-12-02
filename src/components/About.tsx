@@ -33,14 +33,16 @@ export default function About() {
                   About Me
                 </span>
               </h2>
+              <a href="https://www.linkedin.com/in/mateo-galvez-618000225/" target='_blank' className='mx-8'>
               <img 
                 src="/mateo.jpg" 
                 alt="Mateo" 
                 className="w-48 h-48 rounded-full object-cover shadow-lg shadow-gray-50 hover:scale-110 hover:transition "
               />
+              </a>
             </div>
-            <p className="text-gray-300 mb-6">
-              I'm a passionate developer focused on creating innovative digital solutions. With a strong foundation in modern web technologies, I bring ideas to life through clean code and intuitive design.
+            <p className="text-gray-300 mb-6 mt-8">
+              I'm a enthusiast developer focused on creating innovative digital solutions. With a strong foundation in modern web technologies, I bring ideas to life through clean code and intuitive design.
             </p>
             <p className="text-gray-300">
               When I'm not coding, you can find me exploring new technologies, working on my travel website, or sharing knowledge with the developer community.
