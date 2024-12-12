@@ -19,11 +19,11 @@ const projects = [
   },
   {
     title: "Tercer proyecto",
-    description: "AI-powered data visualization dashboard",
+    description: "APP Clima de ciudades",
     image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800",
-    tags: ["Python", "TensorFlow", "D3.js"],
-    github: "https://github.com",
-    demo: "https://demo.com"
+    tags: ["React", "Typescript", "Tailwind"],
+    github: "https://github.com/matgal21/app-clima",
+    demo: "https://v0-app-clima-xhbh6kfwtzf.vercel.app/"
   }
 ];
 
