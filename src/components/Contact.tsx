@@ -5,7 +5,7 @@ import toast from 'react-hot-toast';
 
 // Initialize EmailJS with public key
 emailjs.init({
-  publicKey: '_-9zDviJ6IYJmyLnj',
+  publicKey: 'g8wSQG1Kf1oCZJidJ', // Replace with your EmailJS public key
   limitRate: {
     throttle: 2000,
   }
@@ -26,25 +26,25 @@ export default function Contact() {
         from_name: formRef.current.from_name.value,
         from_email: formRef.current.from_email.value,
         message: formRef.current.message.value,
-        to_name: 'Mateo',
+        to_name: 'Mateo', // Replace with your name
       };
 
       const result = await emailjs.send(
-        'portfoliomateo43797473',
-        'template_whu8y0d',
+        'service_4m2a3pv', // Replace with your EmailJS service ID
+        'template_1rgmt78', // Replace with your EmailJS template ID
         templateParams,
-        '_-9zDviJ6IYJmyLnj'
+        'g8wSQG1Kf1oCZJidJ' // Replace with your EmailJS public key
       );
       
       if (result.status === 200) {
-        toast.success('Message sent successfully!');
+        toast.success('¡Message sent successfully!');
         formRef.current.reset();
       } else {
-        throw new Error('Failed to send message');
+        throw new Error('Error sending message');
       }
     } catch (error) {
       console.error('EmailJS Error:', error);
-      toast.error('Failed to send message. Please try again.');
+      toast.error('Error sending message. Please, try again.');
     } finally {
       setIsSubmitting(false);
     }
@@ -68,7 +68,8 @@ export default function Contact() {
                 </div>
                 <div>
                   <h3 className="font-semibold">Email</h3>
-                  <p className="text-gray-400">mateogalvez123321@gmail.com</p>
+                  <p className="text-gray-400">mateogalvez123321@gmail.com
+</p>
                 </div>
               </div>
               
@@ -127,7 +128,7 @@ export default function Contact() {
               disabled={isSubmitting}
               className="w-full px-8 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
             >
-              {isSubmitting ? 'Sending' : 'Send Message'}
+              {isSubmitting ? 'Sending...' : 'Send Message'}
             </button>
           </form>
         </div>
