@@ -33,7 +33,7 @@ export default function Contact() {
         'portfoliomateo43797473',
         'template_whu8y0d',
         templateParams,
-        '_-g8wSQG1Kf1oCZJidJ'
+        'g8wSQG1Kf1oCZJidJ'
       );
       
       if (result.status === 200) {
