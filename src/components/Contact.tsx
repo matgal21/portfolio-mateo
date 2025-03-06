@@ -5,7 +5,7 @@ import toast from 'react-hot-toast';
 
 // Initialize EmailJS with public key
 emailjs.init({
-  publicKey: 'g8wSQG1Kf1oCZJidJ', // Replace with your EmailJS public key
+  publicKey: 'g8wSQG1Kf1oCZJidJ',
   limitRate: {
     throttle: 2000,
   }
@@ -26,25 +26,25 @@ export default function Contact() {
         from_name: formRef.current.from_name.value,
         from_email: formRef.current.from_email.value,
         message: formRef.current.message.value,
-        to_name: 'Mateo', // Replace with your name
+        to_name: 'Mateo',
       };
 
       const result = await emailjs.send(
-        'service_4m2a3pv', // Replace with your EmailJS service ID
-        'template_1rgmt78', // Replace with your EmailJS template ID
+        'portfoliomateo43797473',
+        'template_whu8y0d',
         templateParams,
-        'g8wSQG1Kf1oCZJidJ' // Replace with your EmailJS public key
+        '_-g8wSQG1Kf1oCZJidJ'
       );
       
       if (result.status === 200) {
-        toast.success('¡Message sent successfully!');
+        toast.success('¡Mensaje enviado con éxito!');
         formRef.current.reset();
       } else {
-        throw new Error('Error sending message');
+        throw new Error('Error al enviar el mensaje');
       }
     } catch (error) {
       console.error('EmailJS Error:', error);
-      toast.error('Error sending message. Please, try again.');
+      toast.error('Error al enviar el mensaje. Por favor, intenta nuevamente.');
     } finally {
       setIsSubmitting(false);
     }
@@ -55,7 +55,7 @@ export default function Contact() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-4xl font-bold text-center mb-12">
           <span className="bg-gradient-to-r from-blue-500 to-blue-700 bg-clip-text text-transparent border-b-4">
-          Get in Touch
+            Contáctame
           </span>
         </h2>
 
@@ -67,9 +67,8 @@ export default function Contact() {
                   <Mail className="w-6 h-6" />
                 </div>
                 <div>
-                  <h3 className="font-semibold">Email</h3>
-                  <p className="text-gray-400">mateogalvez123321@gmail.com
-</p>
+                  <h3 className="font-semibold">Correo</h3>
+                  <p className="text-gray-400">mateogalvez123321@gmail.com</p>
                 </div>
               </div>
               
@@ -78,7 +77,7 @@ export default function Contact() {
                   <Phone className="w-6 h-6" />
                 </div>
                 <div>
-                  <h3 className="font-semibold">Phone</h3>
+                  <h3 className="font-semibold">Teléfono</h3>
                   <p className="text-gray-400">+54 2923-414359</p>
                 </div>
               </div>
@@ -88,7 +87,7 @@ export default function Contact() {
                   <MapPin className="w-6 h-6" />
                 </div>
                 <div>
-                  <h3 className="font-semibold">Location</h3>
+                  <h3 className="font-semibold">Ubicación</h3>
                   <p className="text-gray-400">Buenos Aires, Argentina</p>
                 </div>
               </div>
@@ -100,7 +99,7 @@ export default function Contact() {
               <input
                 type="text"
                 name="from_name"
-                placeholder="Name"
+                placeholder="Nombre"
                 required
                 className="w-full px-4 py-3 rounded-lg backdrop-blur-md bg-white/5 border border-white/10 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500/20 transition-all"
               />
@@ -109,7 +108,7 @@ export default function Contact() {
               <input
                 type="email"
                 name="from_email"
-                placeholder="mail@gmail.com"
+                placeholder="correo@ejemplo.com"
                 required
                 className="w-full px-4 py-3 rounded-lg backdrop-blur-md bg-white/5 border border-white/10 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500/20 transition-all"
               />
@@ -118,7 +117,7 @@ export default function Contact() {
               <textarea
                 name="message"
                 rows={4}
-                placeholder="Your message"
+                placeholder="Tu mensaje"
                 required
                 className="w-full px-4 py-3 rounded-lg backdrop-blur-md bg-white/5 border border-white/10 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500/20 transition-all"
               />
@@ -128,7 +127,7 @@ export default function Contact() {
               disabled={isSubmitting}
               className="w-full px-8 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
             >
-              {isSubmitting ? 'Sending...' : 'Send Message'}
+              {isSubmitting ? 'Enviando...' : 'Enviar Mensaje'}
             </button>
           </form>
         </div>
