@@ -30,8 +30,8 @@ export default function Contact() {
       };
 
       const result = await emailjs.send(
-        'portfoliomateo43797473',
-        'template_whu8y0d',
+        'service_4m2a3pv',
+        '__ejs-test-mail-service__',
         templateParams,
         'g8wSQG1Kf1oCZJidJ'
       );
